@@ -34,7 +34,7 @@ def incr (uri, alph, num = 1)
 
 	while num > 0
 		uri_pos = uri.length-1
-		alph_pos = alph.lenght-1
+		alph_pos = alph.length-1
 
 		while uri[uri_pos] == alph[alph_pos]
 			uri[uri_pos] = alph[0]
