@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 require 'down'
 require 'net/http'
 
@@ -11,9 +13,9 @@ def ext_link (page, link_head)
 	link_head.each do |link|
 		if page.index(link) != nil
 			link_a = page.index(link)
-			link_b = page.index('"', link_a)
+			link_b = page.index('"', link_a)-1
 
-			return page [ link_a .. link_b-1 ]
+			return page [ link_a..link_b ]
 		end
 	end
 
